@@ -29,7 +29,7 @@ public class LinkedList {
      *
      * @param num dato que se almacenara en el nuevo nodo a agregar
      */
-    public void addNode(int num) {
+    public void addNode(float num) {
         Nodo newNodo = new Nodo(num);
         if (nodos == 0) {
             first = newNodo;

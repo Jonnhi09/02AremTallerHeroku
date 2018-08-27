@@ -13,7 +13,7 @@ public class App {
         LinkedList numberList = new LinkedList();
         Estadistico statistical;
         for (String n : setNumbers) {
-            numberList.addNode(Integer.parseInt(n)); //Agregar nodos a la LinkedList.
+            numberList.addNode(Float.parseFloat(n)); //Agregar nodos a la LinkedList.
         }
         statistical = new Estadistico(numberList);
         mean = statistical.mean();

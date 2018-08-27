@@ -12,14 +12,14 @@ package edu.escuelaing.arem.app;
 public class Nodo {
 
     private Nodo next, prior;
-    private int data;
+    private float data;
 
     /**
      * Implementa un tipo de dato Nodo para construir una lista
      *
      * @param data valor que se almacenara en el nodo.
      */
-    public Nodo(int data) {
+    public Nodo(float data) {
         this.data = data;
         next = null;
         prior = null;
@@ -41,11 +41,11 @@ public class Nodo {
         this.prior = prior;
     }
 
-    public int getData() {
+    public float getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(float data) {
         this.data = data;
     }
 

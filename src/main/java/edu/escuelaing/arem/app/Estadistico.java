@@ -23,7 +23,7 @@ public class Estadistico {
      * @return El valor de la media de un conjunto de elmentos.
      */
     public float mean() {
-        int sumatoria = 0;
+        float sumatoria = 0f;
         int elementsNumber = elementsSet.getNodos();
         if (elementsNumber == 0) {
             throw new RuntimeException("No hay elementos para realizar la operacion.");
@@ -33,7 +33,7 @@ public class Estadistico {
             sumatoria += elementsSet.getPointer().getData();
             elementsSet.nextNode();
         }
-        return (float) sumatoria / elementsNumber;
+        return Math.round(((float) sumatoria / elementsNumber) * 100f) / 100f;
     }
 
     /**
@@ -53,6 +53,6 @@ public class Estadistico {
             sumatoria += (float) Math.pow(elementsSet.getPointer().getData() - mean, 2);
             elementsSet.nextNode();
         }
-        return (float) Math.sqrt(sumatoria / (elementsNumber - 1));
+        return Math.round((float) Math.sqrt(sumatoria / (elementsNumber - 1)) * 100f) / 100f;
     }
 }
